@@ -1,0 +1,143 @@
+@import "extends";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html { height: 100%; }
+
+body {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: arial, sans-serif;
+    color: #808080;
+    background: #efefef url(../images/body.png) repeat-x 0 0;
+    min-width: 950px;
+}
+
+a {
+  color: #65cbf8;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//WRAPPER
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -279px;
+
+  .header {
+    background: url(../images/header.png) repeat-x 0 0;
+    height: 58px;
+    padding: 29px 0 0 0;
+  }
+
+  .shell {
+    margin: 0 auto;
+    width: 950px;
+  }
+}
+ //NAVIGATION
+#navigation {
+  float: right;
+  padding-top: 8px;
+
+  ul {
+    list-style: none;
+    list-style-position: outside;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    li {
+      float: left;
+      padding: 0 0 0 44px;
+
+      &.active a {
+        @extend %nav_links_style;
+      }
+
+      a {
+        color: #77777b;
+
+        &:hover {
+          @extend %nav_links_style;
+        }
+      }
+    }
+  }
+}
+
+//MAIN
+.main {
+  padding-top: 42px;
+
+  h2 {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #424242;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 22px;
+    color: #000;
+    font-weight: normal;
+  }
+
+  .cols {
+    padding-bottom: 54px;
+
+    .col {
+      width: 280px;
+      float: left;
+
+      &:last-of-type {
+        width: 274px;
+      }
+
+      &+ .col {
+        padding-left: 55px;
+      }
+
+      h3 {
+        padding-bottom: 14px;
+        padding-left: 50px;
+
+        a {
+          color: #000;
+
+          &:hover {
+            text-decoration: none;
+            color: #333;
+          }
+        }
+        @each $images in starter-ico, awesome-ico, save-ico {
+          &.#{$images} {
+            background: url("../images/#{$images}.png") no-repeat 0 0;
+          }
+        }
+      }
+
+      p {
+        padding-bottom: 10px;
+      }
+
+      a.more {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

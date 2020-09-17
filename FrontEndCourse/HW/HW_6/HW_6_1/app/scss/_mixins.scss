@@ -1,0 +1,11 @@
+@mixin blocks($blocks) {
+    float: left;
+
+    @if($blocks == 3) {
+        box-sizing: border-box;
+        width: 150px;
+        height: 105px;
+        padding: 16px;
+        margin: 3px;
+    }
+}

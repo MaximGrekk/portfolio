@@ -1,0 +1,19 @@
+#logo {
+  width: 120px;
+}
+
+#object {
+  transition: transform 600ms ease;
+  animation: color 3s infinite;
+}
+
+#object:hover {
+  cursor: pointer;
+  transform: translateY(-10px) translateX(10px) scale(1.1);
+}
+
+@keyframes color {
+  from {fill: red}
+  50% {fill: blue}
+  to {fill: red}
+}

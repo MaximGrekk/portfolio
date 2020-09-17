@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FinalWork_3</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+
+  <div id="mySidenav">
+    <div class="sidenav">
+      <div class="input col-12 py-4">
+        <input type="text" class="offset-2 col-10 form-control py-4" placeholder="Поиск">
+      </div>
+      <div class="offset-2 menu">
+        <p class="case1 font-18 font-weight-bold">Меню</p>
+        <div class="hr_blue mb-4"></div>
+        <ul class="text-uppercase">
+          <li><a href="">Главная</a></li>
+          <div class="hr mt-2 mb-4"></div>
+          <li><a href="">Про нас</a></li>
+          <div class="hr mt-2 mb-4"></div>
+          <li><a href="">Контакты</a></li>
+          <div class="hr mt-2 mb-4"></div>
+        </ul>
+      </div>
+      <div class="mr-3">
+        <div class="info mt-5 offset-2 ">
+          <p class="case2 font-18 font-weight-bold">Информация про нас</p>
+          <div class="hr_blue mb-4"></div>
+
+          <div class="card col-12 notPaddingLR notMarginLR mr-5">
+            <div class="rounded scale">
+              <img class="rounded card-img-top" src="img/sidebar_1.png" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <p class="card-text mb-3">На днях был придуман новый язык программирования - Kotik!</p>
+            </div>
+          </div>
+
+          <div class="card col-12 notPaddingLR notMarginLR mr-5">
+            <div class="rounded scale">
+              <img class="rounded card-img-top" src="img/sidebar_2.png" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Эксперты усомнились в подлинности данных, которые предоставила компания Apple</p>
+              <button type="button" class="mt-3 mr-2 btn btn-outline-primary mb-3">Далее</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Тут две бутстрап карточки, одна без кнопки, затем линия -->
+      </div>
+      <div class="help offset-2 ">
+        <div class="helpTxt">
+          <p class="case3 font-18 font-weight-bold">Помощь</p>
+          <div class="hr_blue mb-4"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis asperiores ullam, rerum autem accusantium, excepturi fugit quo nemo, quibusdam doloribus ea laboriosam animi incidunt natus, aliquam dolorem aliquid consectetur non!</p>
+
+        </div>
+        <div class="helpContacts">
+          <ul>
+            <li><div><i class="fas fa-envelope"></i><a href="">test@itproger.com</a></div></li>
+            <div class="hr mt-2 mb-4"></div>
+            <li><div><i class="fas fa-phone"></i><a href="">(000) 000 - 0000</a></div></li>
+            <div class="hr mt-2 mb-4"></div>
+            <li><div><i class="fas fa-home"></i><a href="">USA Washington Seattle <br>     Northway 13002</a></div></li>
+            <div class="hr mt-2 mb-4"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
+
+<div class="main">
+  <header>
+    <div class="navbar mb-3">
+      <span class="buttonMenu mt-2 menu" id="show-menu">
+        <i class="fas fa-bars"></i>
+      </span>
+    </div>
+    <div class="container-xl">
+      <span class="logo container-xl ml-xl-0 ml-lg-1 ml-md-2 ml-sm-3 ml-4">СМИ портал</span>
+      <div class="hr_blue mt-3 mb-5"></div>
+    </div>
+  </header>
+
+
+  <!--  -->
+  <!-- Джамбатрон с картинкой -->
+  <div class="jumbotron container-xl pt-0 mb-0">
+    <div class="row d-flex justify-content-between">
+      <div class="col-xl-6 col-md-6 col-sm-12 col-12 order-md-1 order-sm-2 order-2 my-2">
+        <p class="h2 font-weight-bold">Работа мечты <br>компания Google</p>
+        <p class="text-uppercase">Что из себя представляет работа в Гугл?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu leo lacus. Nullam venenatis, dui nec luctus malesuada, mauris nibh finibus neque, sed aliquam eros augue ac leo. Donec dictum lobortis congue. Nullam vel interdum felis, vitae lobortis dolor. </p>
+        <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Читать дальше</button>
+      </div>
+      <div class="col-xl-6 col-md-6 col-sm-12 col-12 order-md-2 order-sm-1 order-1 my-2">
+        <!-- <div class="img-holder jumbotronImg"></div> -->
+        <div class="scale">
+          <img src="img/0.jpg" alt="" class="img-fluid jumbotronImg">
+        </div>
+      </div>
+    </div>
+    <div class="hr mt-4 mb-0"></div>
+  </div>
+
+  <main class="main container-xl notPaddingLR">
+    <section>
+      <div class="latest_published">
+        <p class="mb-1 pl-lg-3 pl-md-2 pl-1 text-left">Последние опубликованные</p>
+        <div class="hr_blue mb-4"></div>
+      </div>
+
+      <div class= "row mb-2 justify-content-left notMarginLR" id="loadMoreBlock">
+
+        <div class="card col-md-6 col-12 notMarginLR notPaddingLR">
+          <div class="scale">
+            <img class="scale card-img-top" src="img/1.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-title font-16 font-weight-bold">Какие языки программирования ненавидят больше и почему?</p>
+            <p class="card-text">Авторитетный веб-ресурс Stack Overflow решил заняться опросом в отношении языков программирования. В этот раз в центре внимания нелюбимые языки</p>
+            <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+          </div>
+        </div>
+
+        <div class="card col-md-6 col-12 notMarginLR notPaddingLR">
+          <div class="scale">
+            <img class="scale card-img-top" src="img/2.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-title font-16 font-weight-bold">Надо ли заклеивать камеру на ноутбуке?</p>
+            <p class="card-text">Заклеивать камеру ноутбука - паранойя или эффективное средство защититься от хакеров? Мы рассмотрим аспекты за и против и ответим на этот вездесущий вопрос.</p>
+            <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+          </div>
+        </div>
+
+        <div class="card col-md-6 col-12 notMarginLR notPaddingLR">
+          <div class="scale">
+            <img class="scale card-img-top" src="img/3.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-title font-16 font-weight-bold">5 будущих профессий для IT специалистов</p>
+            <p class="card-text">Профессии постоянно пополняются и IT сфера вовсе не исключение. Мы подготовили список из 5 возможных будущих профессий, к которым можно подготовиться уже сейчас.</p>
+            <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+          </div>
+        </div>
+
+        <div class="card col-md-6 col-12 notMarginLR notPaddingLR">
+          <div class="scale">
+            <img class="card-img-top" src="img/4.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-title font-16 font-weight-bold">ИИ на Python для распознавания голоса и выполнения команд</p>
+            <p class="card-text">На Python можно строить как простые программы, так и сложные ИИ системы. В данной статье мы покажем как реализовать распознавание голоса и выполнение различных команд.</p>
+            <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+          </div>
+        </div>
+
+        <div class="card col-md-6 col-12 notMarginLR notPaddingLR">
+          <div class="scale">
+            <img class="card-img-top" src="img/5.jpg" alt="Card image cap">
+            <div class="card-body">
+          </div>
+            <p class="card-title font-16 font-weight-bold">Изучение Git на реальных примерах</p>
+            <p class="card-text">Git – это очень полезная система управления версиями, которая позволяет разработчикам эффективнее работать вместе. В статье вкратце на примерах, вы изучите основные моменты Git.</p>
+            <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+          </div>
+        </div>
+
+        <div class="card col-md-6 col-12 notMarginLR notPaddingLR">
+          <div class="scale">
+            <img class="card-img-top" src="img/6.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <p class="card-title font-16 font-weight-bold">Почему JavaScript очень крутой язык программирования?</p>
+            <p class="card-text">Язык JavaScript за последние года стал мега популярным и завоевал огромное доверие среди разработчиков. Почему он так крут? Узнаем в этой статье.</p>
+            <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="hr mt-5 mb-5"></div>
+
+    <aside>
+      <div class="articles">
+        <div class= "row mb-2 justify-content-left notMarginLR" id="loadMoreBlock">
+
+          <div class="card col-md-3 col-sm-6 col-12 notMarginLR">
+            <div class="scale">
+              <img class="card-img-top" src="img/article_1.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <p class="card-title font-16 font-weight-bold">Angular</p>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, doloremque!</p>
+              <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+            </div>
+          </div>
+
+          <div class="card col-md-3 col-sm-6 col-12 notMarginLR">
+            <div class="scale">
+              <img class="card-img-top" src="img/article_2.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <p class="card-title font-16 font-weight-bold">Python</p>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+            </div>
+          </div>
+
+          <div class="card col-md-3 col-sm-6 col-12 notMarginLR">
+            <div class="scale">
+              <img class="card-img-top" src="img/article_3.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <p class="card-title font-16 font-weight-bold">Swift</p>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+            </div>
+          </div>
+
+          <div class="card col-md-3 col-sm-6 col-12 notMarginLR">
+            <div class="scale">
+              <img class="card-img-top" src="img/article_4.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <p class="card-title font-16 font-weight-bold">PHP & MySQL</p>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+              <button type="button" class="mt-3 mr-2 btn btn-outline-primary">Далее</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="container-xl mt-5">
+    <div class="information">
+      <p class="mb-1 pl-lg-3 pl-md-2 pl-1 text-left">Информация</p>
+      <div class="hr_blue mb-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <div class="row">
+          <div class="col-2 text-center py-3 picture"><a href=""><i class="fas fa-users"></i></a></div>
+          <div class="col-10 info">
+            <p class="font-16 font-weight-bold">Множество клиентов</p>
+            <p>Огромное количество клиентов выбирают нас, так как мы всегда держим руку на пульсе всего происходящего</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="row">
+          <div class="col-2 text-center py-3 picture"><a href=""><i class="fab fa-youtube"></i></a></div>
+          <div class="col-10 info">
+            <p class="font-16 font-weight-bold">Большая аудитория YouTube</p>
+            <p>Большая фан-база на площадке YouTube. Вы всегда можете найти ту ифнормацию, которая сейчас у всех на слуху, на нашем канале</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

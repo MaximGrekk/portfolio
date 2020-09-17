@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+  <div id="myOverlay" class="overlay">
+    <div class="overlay-content">
+      <h2 class="display-5 mb-4">Форма поиска</h2>
+      <form>
+        <div class="position-relative searchBlock">
+          <input required="required" class="form-control d-inline rounded mt-1 mb-1 d-inline" type="search" placeholder="Поиск">
+          <button class="resetBtn" type="reset" title="Click me to clear the input field"><i class="fas fa-times-circle"></i></button>
+        </div>
+      </form>
+      <button type="button" class="closebtn mt-3 px-3 py-2 border-0 text-white" onclick="closeSearch()">Закрыть</button>
+    </div>
+  </div>
+<!--  -->
+  <header class="bg-white my-4 container border rounded">
+      <div class="container p-2">
+        <div class="row pl-1 pr-1">
+          <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-3 transformImg">
+            <img src="img/logo1.png" alt="" class="logoImg">
+          </div>
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-3 font-weight-bolder logoTxt">
+            <p class="d-inline font-weight-bold h3">itProger</p>
+            <p class="d-inline blogColor h4">Blog</p>
+          </div>
+          <div class="col-xl-3 offset-xl-3 col-lg-3 offset-lg-2 col-md-12 my-3 d-flex justify-content-center align-items-center">
+            <input type="text" onclick="openSearch()" name="" class="form-control inputHeader" placeholder="Поиск">
+          </div>
+          <div class="my-2 col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 offset-md-7 col-md-4 offset-sm-6 col-md-3 offset-4 col-4 d-flex justify-content-center align-items-center">
+            <a href="" class="btn btn-outline-light text-dark border mr-1" role="button" aria-disabled="true">Главная</a>
+            <a href="" class="btn btn-outline-light text-dark border mr-1" role="button" aria-disabled="true">Статьи</a>
+            <a href="" class="btn btn-outline-light text-dark border mr-1" role="button" aria-disabled="true">Контакты</a>
+          </div>
+        </div>
+      </div>
+  </header>
+  <!-- Джамбатрон с картинкой -->
+  <div class="jumbotron container bloodColor">
+      <div class="row">
+        <div class="col-xl-6 col-md-6 text-white">
+          <p class="h2">3 основные сферы применения языка Python</p>
+          <p>До начала активного изучения любого языка программирования правильно было бы задуматься о сферах его применения. Мы расскажем про 3 самые поплярные сферы применения языка Python.</p>
+          <a href="" class="btn bg-danger btn-outline-dark text-white mt-3 mr-2 border-0" role="button" aria-disabled="true">Читать дальше</a>
+        </div>
+        <div class="col-xl-6 col-md-6 mt-5">
+          <div class="">
+            <img src="img/mozilla_rust.png" alt="" class="border img-fluid jumbotronImg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="content container p-2">
+    <div class="row articles">
+      <div class="col-xl-8 col-12 d-inline-block">
+        <section>
+          <h2 class="text-center mb-4">Новости</h2>
+          <div class= "row mb-2  justify-content-around notMarginLR" id="loadMoreBlock">
+
+            <div class="card col-md-5 col-12 notMarginLR">
+              <img class="card-img-top" src="img/1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Сравнение движков: Unreal Engine 4 против Unity 5</h5>
+                <p class="card-text">Выбрать движок дело не простое, а особенно когда оба очень хороши. В статье мы проведем сравнение двух программ и выясним какой движок использовать именно Вам!</p>
+                <a href="#" class="btn btn-warning">Читать далее</a>
+              </div>
+            </div>
+
+            <div class="card col-md-5 col-12 notMarginLR">
+              <img class="card-img-top" src="img/2.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">7 девушек айтишниц из фильмов и сериалов</h5>
+                <p class="card-text">Много ли вы знаете фильмов и сериалов, где главные персонажы это девушки программисты? Мы подобрали 7 фильмов с такой концепцией.</p>
+                <a href="#" class="btn btn-warning">Читать далее</a>
+              </div>
+            </div>
+
+            <div class="card col-md-5 col-12 notMarginLR">
+              <img class="card-img-top" src="img/3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">11 полезных инструментов для веб-разработчика</h5>
+                <p class="card-text">Разработчики постоянно пытаются сделать свою жизнь проще или расширить собственные возможности. Мы подготовили 11 инструментов, которые это обеспечат.</p>
+                <a href="#" class="btn btn-warning">Читать далее</a>
+              </div>
+            </div>
+
+            <div class="card col-md-5 col-12 notMarginLR">
+              <img class="card-img-top" src="img/4.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Что такое Deep Learning? Как работает глубокое обучение?</h5>
+                <p class="card-text">Как работает глубокое обучение и что оно из себя представляет? В ходе статьи мы расскажем про Deep Learning и разберемся с его ключевыми понятиями.</p>
+                <a href="#" class="btn btn-warning">Читать далее</a>
+              </div>
+            </div>
+
+          </div>
+          <span class="d-flex justify-content-center mx-auto"><button class="js-buttonLoadMore mt-4 mb-3 rounded btn btn-danger text-white border" role="button">Подгрузить больше</button></span>
+        </section>
+      </div>
+
+      <div class="col-xl-4 col-md-12 notMarginLR d-block">
+        <h2 class="text-center mb-4">Анонсы</h2>
+        <aside class="notMarginLR">
+          <p class="bg-white rounded p-2"> Etiam porta sem malesuada magna mollis euismod. Cras mattis cossectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed cossectetur</p>
+          <div class="card bg-info">
+            <img class="card-img-top imgAside img-thumbnail" src="img/android.jpg" alt="Card image cap">
+            <div class="card-body text-white">
+              <p class="card-text">Etiam porta sem malesuada magna mollis euismod. Cras mattis cossectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed cossectetur.</p>
+              <a href="#" class="btn btn-light">Читать далее</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="container border rounded-top mt-4 shadow-sm bg-white">
+    <h6 class="text-center py-2 my-4 bg-white">Все права защищены &copy;</h6>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

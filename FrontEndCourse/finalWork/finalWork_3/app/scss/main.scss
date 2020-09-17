@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html, body {height: 100%;}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #fff;
+  color: $textColor;
+}
+
+a {
+  text-decoration: none;
+  transition: all 600ms ease;
+  color: #212325;
+}
+
+header {
+
+  .menu {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: lighter;
+    transition: background 400ms ease;
+
+    &:hover {
+      background: #e5e9e9;
+    }
+
+    i {
+      font-size: 2.5em;
+      color: $mainColor;
+    }
+  }
+
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+#hidden-menu {
+  width: 300px;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+  z-index: 10;
+  display: none;
+}
+
+
+
+.jumbotron {
+  background-color: #fff;
+
+  .jumbotronImg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main {
+  section {
+
+    .latest_published {
+      font-size: 24px;
+      font-weight: 700;
+
+      .hr_blue {
+        max-width: 45%;
+        margin-left: 0%;
+        height: 2px;
+      }
+    }
+
+    .card {
+      border-radius: 0px;
+
+      &:nth-child(2n) {
+        border-top: 0px;
+        border-right: 0px;
+        border-left: 0px;
+      }
+
+      &:nth-child(2n+1) {
+        border-top: 0px;
+        border-left: 0px;
+      }
+
+      &:nth-last-child(-n+2) {
+        border-bottom: 0px;
+      }
+      //
+      // &:nth-last-child(2) {
+      //   border-bottom: 1px solid rgb(218, 218, 218);
+      // }
+      //
+      // &:nth-last-child(-n+2):nth-child(2n+1) {
+      //   border-right: 2px solid rgb(218, 218, 218);
+      // }
+    }
+  }
+
+  aside {
+    .card {
+      border: 0px;
+    }
+  }
+}
+
+footer {
+
+  .information {
+    font-size: 24px;
+    font-weight: 700;
+
+    .hr_blue {
+      max-width: 35%;
+      margin-left: 0%;
+      height: 3px;
+    }
+  }
+
+  .picture {
+
+    i {
+      font-size: 3em;
+      color: $mainColor;
+    }
+  }
+}
+
+//////
+// всплывающее слева меню
+
+#mySidenav {
+  // height: 260%;
+  min-height: 100vh;
+  border-radius: 8px;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f6f7;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .sidenav {
+
+    .case1 + .hr_blue {
+      margin: 0;
+      width: 60px;
+    }
+
+    .case2 + .hr_blue {
+      margin: 0;
+      width: 185px;
+    }
+
+    .case3 + .hr_blue {
+      margin: 0;
+      width: 85px;
+    }
+
+    .input {
+      background: #eff1f2;
+
+      input {
+        padding: 10px 15px;
+        border-radius: 7px;
+        outline: none;
+      }
+    }
+
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 14px;
+      color: #212325;
+      transition: 0.3s;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+
+    .menu {
+      margin-top: 30px;
+      ul {
+        list-style-type: none;
+
+        .hr {
+          height: 1px;
+          margin-right: 7.5%;
+          position: relative;
+          right: 10px;
+        }
+
+        li {
+          padding: 8px 0;
+
+          a {padding: 0;}
+        }
+      }
+    }
+
+    .info {
+
+      .card {
+        background: inherit;
+        margin-bottom: 25px;
+        border: 0px;
+        border-bottom: 2px solid #e0e3e5;
+      }
+    }
+
+    .helpContacts {
+
+      ul {
+        list-style-type: none;
+
+        .hr {
+          height: 1px;
+          margin-right: 7.5%;
+          position: relative;
+          right: 10px;
+        }
+
+        li {
+          padding: 8px 0;
+
+          i {
+            display: inline-block;
+            color: $mainColor;
+            font-size: 2.4em;
+            padding-right: 10px;
+            margin-right: 20px;
+          }
+
+          a {
+            padding: 0;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-height: 450px) {
+//   .sidenav {padding-top: 15px;}
+//   .sidenav a {font-size: 18px;}
+// }
+
+// Анимация выплывания
+.main, #mySidenav {
+  transition: width 750ms ease, margin-left 750ms ease;
+}
+
+
+//////
+
+///// Общие
+
+///// scale картинок
+.scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+   }
+   .scale img {
+    transition: 1.2s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+   }
+   .scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+/////
+
+.img-holder {
+  background: $img-holder-bg;
+}
+
+.hr {
+  height: 2px;
+  margin: 0 auto;
+  background: $hrColor;
+}
+
+.hr_blue {
+  height: 3px;
+  margin: 0 auto;
+  width: 95%;
+  background: $mainColor;
+}
+
+.notPaddingLR {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.notMarginLR {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.fa-phone {
+  transform: rotate(90deg);
+}
+
+// Шрифты
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+//
+
+
+// медиа-запросы
+@media (max-width: 813px) {
+  #mySidenav {
+    .sidenav {
+      .case1 + .hr_blue {
+        margin: 0;
+        width: 60px;
+      }
+      .case2 + .hr_blue {
+        margin: 0;
+        width: 135px;
+      }
+      .case3 + .hr_blue {
+        margin: 0;
+        width: 85px;
+      }
+    }
+  }
+}
+@media (max-width: 660px) {
+  #mySidenav {
+    .sidenav {
+      .case1 + .hr_blue {
+        margin: 0;
+        width: 60px;
+      }
+      .case2 + .hr_blue {
+        margin: 0;
+        width: 115px;
+      }
+      .case3 + .hr_blue {
+        margin: 0;
+        width: 85px;
+      }
+    }
+  }
+}

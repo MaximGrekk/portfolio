@@ -1,0 +1,186 @@
+// @import "vars";
+// @import "extends";
+// @import "mixins";
+// // $font-family: 'Times New Roman';
+// //
+// // body {
+// //     background: $main-bg-color;
+// //     padding: 20px;
+// // }
+// //
+// // .txt {
+// //     color: $main-text-color;
+// //     font-family: $font-family, sans-serif;
+// // }
+// //
+// // span.text {
+// //     color: $main-text-color;
+// //     font-weight: bold;
+// //     font-family: $font-family, serif;
+// // }
+//
+// //2
+//
+// $color-text: blue;
+//
+// .block {
+//     @extend %block;
+//
+//     width: (50% - 5%);
+//
+//     margin-bottom: 20px;
+//     > p {
+//         color: white;
+//         > a {
+//             @include font($color: pink);
+//
+//             &:hover {text-decoration: line-through;}
+//         }
+//         &::first-letter {color: $color-text;}
+//     }
+//     &:hover {
+//         background: green;
+//     }
+//     &::after {
+//         content: 'Hi!'
+//     }
+// }
+//
+// .block-2 {
+//     @extend %block;
+//     @include padd(#fcfcfc, 20px, 30px, 40px, 50px);
+//     @include links(white) {
+//         background: #333;
+//         b {
+//             color: red;
+//         }
+//         &:active {color: green;}
+//     }
+// }
+//
+//  @include links(red);
+//
+// .btn-green {
+//     @extend %btn;
+//     background-color: green;
+// }
+//
+// .btn-red {
+//     @include font($color: #fff, $size: 24px, $fontWeight: light);
+//     @extend %btn;
+//     background-color: red;
+// }
+//
+// #main-block {
+//     float: left;
+//     margin-top: 20px;
+//     width: 100%;
+//     > div {
+//         @include blocks(5);
+//     }
+// }
+//
+// @for $el from 0 to 10 {
+// .#{$some-class}-#{$el}{
+//         padding: (20px + $el) * 2;
+//     }
+// }
+
+// begin
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+@import "vars";
+@import "mixins";
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+html, body {height: 100%;}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 100%;
+    @include gradient(45deg, #b08a90, #b9d8e4);
+    min-height: 100%;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+.block {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    border-radius: 4px;
+    padding: 50px 0px;
+
+    .img-holder {
+        @include gradient(90deg, #b3aab9, #bad2df);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 23px;
+        color: $main-text-color;
+    }
+
+    p {
+        color: darken($main-text-color, 10%);
+        margin-top: 20px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 50px;
+
+        div {
+            border: 1px solid $social-color;
+            border-radius: 50%;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: $social-color;
+            transition: all 1s ease;
+
+            &.twitter:hover {
+                @include social-hover(#48c7ea, white);
+            }
+
+            &.fb:hover {
+                @include social-hover(#3b5999, white);
+            }
+
+            &.yt:hover {
+                @include social-hover(#ff0000, white);
+            }
+        }
+    }
+}
+
+.bottom-text {
+    text-align: center;
+    color: #c8c2c8;
+    margin-top: 100px;
+}
+
+
+
+
+// end

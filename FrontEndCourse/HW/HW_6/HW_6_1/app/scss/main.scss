@@ -1,0 +1,28 @@
+@import "vars";
+@import "mixins";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+// html, body {height: 100%;}
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: 15%;
+    background-color: #fff;
+    width: (157px * 3);
+    height: (111px * 3);
+    padding-left: 3px;
+
+    @each $colors in LightGreen, Magenta, Tomato, Tan, GoldenRod, OliveDrab, LightSeaGreen, DeepSkyBlue, Linen {
+      .#{$colors}-bg {
+        background-color: #{$colors};
+      }
+    }
+
+    > div {
+        @include blocks(3);
+    }
+}

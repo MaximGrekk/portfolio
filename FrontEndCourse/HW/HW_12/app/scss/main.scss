@@ -1,0 +1,264 @@
+
+
+* {
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(237, 237, 237);
+}
+
+header {
+
+  .logoImg {
+    height: 75px;
+    border-radius: 70%;
+    border: 2px solid rgb(135, 37, 38);
+    -webkit-transition: -webkit-transform .8s ease;
+            transition:         transform .8s ease;
+
+    &:hover {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+}
+
+div.content {
+
+  section .card {
+  	width: 46.5%;
+  	margin-bottom: 30px;
+  	margin-right: 3.5%;
+  	// float: left;
+  }
+}
+
+aside .imgAside {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  // border: 4px solid white;
+}
+
+.blogColor {
+  color: rgb(131, 38, 39);
+  font-weight: bolder;
+}
+
+.bloodColor {
+  background: rgb(135, 31, 33);
+}
+
+.jumbotronImg {
+  // transform: scale(1.2);
+}
+
+//////////////////
+
+.notPaddingLR {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.notMarginLR {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+//////////////////
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(210, 210, 210, 0.8);
+  display: none;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+
+  .overlay-content {
+    position: relative;
+    top: 40%;
+    left: 25%;
+
+    h2 {
+      color: rgb(154, 68, 65);
+      font-weight: 400;
+      position: relative;
+      right: 10px;
+    }
+
+    .searchBlock {
+      width: 49%;
+
+      input {
+        width: 100%;
+        padding: 1.5%;
+        border-radius: 9px;
+      }
+
+      .resetBtn[type="reset"] {
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 95%;
+        width: 4%;
+        border: 0;
+        display: none;
+        border-radius: 50%;
+        outline: none;
+        transition: background 200ms;
+        background-color: rgba(255, 255, 255, 0);
+
+        .fa-times-circle {
+          color: #ccc;
+
+          &:hover {
+            color: #444;
+          }
+        }
+
+      }
+
+      input:valid ~ .resetBtn[type="reset"] {
+        display: block;
+      }
+    }
+
+    .closebtn {
+      background: rgb(137, 46, 52);
+      border-radius: 6px;
+
+      &:hover {
+        background: rgb(157, 66, 72);
+      }
+    }
+  }
+}
+
+.searchBlock {
+  width: 49%;
+}
+
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+@media (max-width: 350px) {
+  .overlay > .overlay-content > h2 {
+    color: rgb(154, 68, 65);
+    font-weight: 400;
+    position: relative;
+    right: 12%;
+  }
+
+  .logoTxt {
+    position: relative;
+    left: 25px;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(210, 210, 210, 0.8);
+    display: none;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+
+    .overlay-content {
+      position: relative;
+      top: 40%;
+      left: 25%;
+
+      h2 {
+        color: rgb(154, 68, 65);
+        font-weight: 400;
+        position: relative;
+        right: 10px;
+      }
+
+      .searchBlock {
+        width: 49%;
+
+        input {
+          width: 100%;
+          padding: 1.5%;
+          border-radius: 9px;
+        }
+
+        .resetBtn[type="reset"] {
+          left: 80%;
+
+          .fa-times-circle {
+            color: #ccc;
+
+            &:hover {
+              color: #444;
+            }
+          }
+        }
+
+        input:valid ~ .resetBtn[type="reset"] {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+/////////////////////////////////////maedia query///
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
+@media (max-width: 576 ) and (min-width: 400) {
+  .logoTxt {
+    position: relative;
+    right: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  .overlay > .overlay-content > h2 {
+    color: rgb(154, 68, 65);
+    font-weight: 400;
+    position: relative;
+    right: 12%;
+  }
+
+  .logoTxt {
+    position: relative;
+    left: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .overlay {
+    .overlay-content {
+      .searchBlock {
+        .resetBtn[type="reset"] {left: 90%;}
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .overlay {
+    .overlay-content {
+      .searchBlock {
+        .resetBtn[type="reset"] {left: 85%;}
+      }
+    }
+  }
+}

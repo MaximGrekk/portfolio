@@ -1,0 +1,8 @@
+p {
+    background-color: pink;
+    color: #ffd;
+    padding: 20px;
+    margin: 200px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}

@@ -1,0 +1,75 @@
+/* #logo {
+  width: 120px;
+}
+
+#object {
+  transition: transform 600ms ease;
+  animation: color 3s infinite;
+}
+
+#object:hover {
+  cursor: pointer;
+  transform: translateY(-10px) translateX(10px) scale(1.1);
+}
+rgb(50, 64, 146)
+@keyframes color {
+  from {fill: red}
+  50% {fill: blue}
+  to {fill: red}
+} */
+
+#object {
+  width: 25%;
+  position: relative;
+  transition-property: left;
+  transition-duration: 3s;
+  position: relative;
+  left: 0%
+}
+
+.wheel_1:hover {
+  fill: rgb(67, 140, 109)!important;
+}
+
+.wheel_2:hover {
+  fill: rgb(67, 140, 109)!important;
+}
+
+.spoiler {
+  animation: spoilerAnimation 5s infinite;
+}
+
+.objectRight {
+  position: relative;
+  left: 75%;
+  animation: rightAnimation 3s;
+}
+
+.objectLeft {
+  position: relative;
+  left: 0%;
+  animation: leftAnimation 3s;
+}
+
+
+
+/* Animations */
+/* @keyframes leftAnimation {
+  from {left: 75%}
+  to {left: 0%}
+}
+@keyframes rightAnimation {
+  from {left: 0%}
+  to {left: 75%}
+} */
+@keyframes spoilerAnimation {
+  25% {
+    transform: translateX(-5px) skewY(3deg)
+    fill: rgb(252, 139, 19);}
+  50% {
+    transform: translateX(-10px) skewY(5deg);
+    fill: rgb(252, 139, 19);}
+  90% {
+    transform: translateX(0px) skewY(0deg);
+  }
+}

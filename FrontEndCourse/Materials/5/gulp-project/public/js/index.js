@@ -1,0 +1,1 @@
+function some(){return 0}var some="some";function some2(){return 0}var some2="some";

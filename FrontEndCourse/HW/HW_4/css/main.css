@@ -1,0 +1,36 @@
+
+body {
+    font-size: 14px !important;
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 3.7rem !important;
+    }
+}
+
+.top-img{
+    min-height: 100vh;
+    /* height: 100%; */
+    background-image: url(../img/nature.jpg);
+    width: 100%;
+    background-color: #1e1e21;
+    background-size: cover;
+    background-blend-mode: overlay, color;
+    background-attachment: fixed;
+}
+
+.bottom-img{
+    min-height: 100vh;
+    /* height: 100%; */
+    background-image: url(../img/programmer.jpg);
+    width: 100%;
+    background-color: #1e1e21;
+    background-size: cover;
+    background-blend-mode: overlay, color;
+    background-attachment: fixed;
+}
+
+.services {
+    color: rgb(125, 50, 47);
+}
